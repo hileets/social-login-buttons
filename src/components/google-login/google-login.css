@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+.WrapperDiv {
+  height: 42px;
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  max-width: 15%;
+  overflow: hidden;
+}
+.IconWrapperDiv {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15%;
+  animation: logoAnimationOut 0.8s ease forwards;
+}
+
+.WrapperDiv:hover > .IconWrapperDiv {
+  animation: logoAnimationIn 0.8s ease forwards;
+}
+.WrapperDiv:hover {
+  box-shadow: 0 3px 8px rgba(117, 117, 117, 0.5);
+  user-select: none;
+}
+
+.WrapperDiv:active {
+  box-shadow: 0 1px 1px #757575;
+  background: #f8f8f8;
+  color: #fff;
+  user-select: none;
+}
+
+.IconWrapperDiv img {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  user-select: none;
+  margin: auto;
+}
+.ButtonText {
+  color: #757575;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  user-select: none;
+  font-weight: bold;
+  margin: auto 0;
+  width: 0;
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@keyframes logoAnimationIn {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes logoAnimationOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 15%;
+  }
+}
