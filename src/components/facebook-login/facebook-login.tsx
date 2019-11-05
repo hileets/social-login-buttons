@@ -7,12 +7,12 @@ import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
 })
 export class FacebookLogin {
   handleclick(e) {
-    this.onClick.emit(e);
+    this.onclick.emit(e);
   }
   @Prop() text: string;
   @Prop() type: string;
   @Prop() width: string;
-  @Event() onClick: EventEmitter;
+  @Event() onclick: EventEmitter;
   render() {
     return (
       <Host>

@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
+import { Component, Host, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "google-login",
@@ -6,21 +6,13 @@ import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
   shadow: true
 })
 export class GoogleLogin {
-  handleclick(e) {
-    this.onClick.emit(e);
-  }
   @Prop() text: string;
   @Prop() type: string;
   @Prop() width: string;
-  @Event() onClick: EventEmitter;
   render() {
     return (
       <Host>
-        <div
-          // style={{ width: this.width }}
-          class="WrapperDiv"
-          onClick={this.handleclick}
-        >
+        <div class="WrapperDiv">
           <div class="IconWrapperDiv">
             <img
               class="img"
