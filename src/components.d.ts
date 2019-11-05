@@ -25,7 +25,6 @@ export namespace Components {
     'type': string;
     'width': string;
   }
-  interface MyApp {}
 }
 
 declare global {
@@ -48,29 +47,20 @@ declare global {
     prototype: HTMLGoogleLoginElement;
     new (): HTMLGoogleLoginElement;
   };
-
-  interface HTMLMyAppElement extends Components.MyApp, HTMLStencilElement {}
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
-  };
   interface HTMLElementTagNameMap {
     'facebook-login': HTMLFacebookLoginElement;
     'github-login': HTMLGithubLoginElement;
     'google-login': HTMLGoogleLoginElement;
-    'my-app': HTMLMyAppElement;
   }
 }
 
 declare namespace LocalJSX {
   interface FacebookLogin {
-    'onOnclick'?: (event: CustomEvent<any>) => void;
     'text'?: string;
     'type'?: string;
     'width'?: string;
   }
   interface GithubLogin {
-    'onOnclick'?: (event: CustomEvent<any>) => void;
     'text'?: string;
     'type'?: string;
     'width'?: string;
@@ -80,13 +70,11 @@ declare namespace LocalJSX {
     'type'?: string;
     'width'?: string;
   }
-  interface MyApp {}
 
   interface IntrinsicElements {
     'facebook-login': FacebookLogin;
     'github-login': GithubLogin;
     'google-login': GoogleLogin;
-    'my-app': MyApp;
   }
 }
 
@@ -99,7 +87,6 @@ declare module "@stencil/core" {
       'facebook-login': LocalJSX.FacebookLogin & JSXBase.HTMLAttributes<HTMLFacebookLoginElement>;
       'github-login': LocalJSX.GithubLogin & JSXBase.HTMLAttributes<HTMLGithubLoginElement>;
       'google-login': LocalJSX.GoogleLogin & JSXBase.HTMLAttributes<HTMLGoogleLoginElement>;
-      'my-app': LocalJSX.MyApp & JSXBase.HTMLAttributes<HTMLMyAppElement>;
     }
   }
 }

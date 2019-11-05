@@ -1,21 +1,17 @@
-import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
+import { Component, Host, h, Prop } from "@stencil/core";
 @Component({
   tag: "github-login",
   styleUrl: "github-login.css",
   shadow: true
 })
 export class GithubLogin {
-  handleclick = (event: any) => {
-    this.onclick.emit(event);
-  };
   @Prop() text: string;
   @Prop() type: string;
   @Prop() width: string;
-  @Event() onclick: EventEmitter;
   render() {
     return (
       <Host>
-        <div class="WrapperDiv" onClick={this.handleclick.bind(this)}>
+        <div class="WrapperDiv">
           <div class="IconWrapperDiv">
             <img
               class="img"

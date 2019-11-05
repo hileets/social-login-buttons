@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
+import { Component, Host, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "facebook-login",
@@ -6,17 +6,14 @@ import { Component, Host, h, Prop, EventEmitter, Event } from "@stencil/core";
   shadow: true
 })
 export class FacebookLogin {
-  handleclick(e) {
-    this.onclick.emit(e);
-  }
   @Prop() text: string;
   @Prop() type: string;
   @Prop() width: string;
-  @Event() onclick: EventEmitter;
+
   render() {
     return (
       <Host>
-        <div class="WrapperDiv" onClick={this.handleclick}>
+        <div class="WrapperDiv">
           <div class="IconWrapperDiv">
             <img
               class="img"

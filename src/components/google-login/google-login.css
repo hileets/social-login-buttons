@@ -10,7 +10,7 @@
   width: 100%;
   cursor: pointer;
   user-select: none;
-  max-width: 15%;
+  max-width: 210px;
   overflow: hidden;
 }
 .IconWrapperDiv {
