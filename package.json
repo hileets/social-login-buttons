@@ -24,5 +24,39 @@
   "devDependencies": {
     "@stencil/core": "^1.3.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hileets/social-login-buttons.git"
+  },
+  "keywords": [
+    "social",
+    "login",
+    "buttons",
+    "react",
+    "social",
+    "login",
+    "buttons",
+    "login",
+    "buttons",
+    "angular",
+    "social",
+    "login",
+    "buttons",
+    "material",
+    "ui",
+    "social",
+    "login",
+    "buttons",
+    "vue",
+    "social",
+    "login",
+    "buttons"
+  ],
+  "author": "hileets",
+  "bugs": {
+    "url": "https://github.com/hileets/social-login-buttons/issues"
+  },
+  "homepage": "https://github.com/hileets/social-login-buttons#readme"
 }

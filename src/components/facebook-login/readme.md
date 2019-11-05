@@ -14,13 +14,6 @@
 | `width`  | `width`   |             | `string` | `undefined` |
 
 
-## Events
-
-| Event     | Description | Type               |
-| --------- | ----------- | ------------------ |
-| `onclick` |             | `CustomEvent<any>` |
-
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
