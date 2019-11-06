@@ -9,11 +9,18 @@ export class GoogleLogin {
   @Prop() text: string;
   @Prop() type: string;
   @Prop() width: string;
+  @Prop() animation: boolean;
   render() {
     return (
       <Host>
         <div class="WrapperDiv">
-          <div class="IconWrapperDiv">
+          <div
+            style={{
+              // backgroundColor: this.variant == "material" ? "white" : "#3b5998",
+              animation: this.animation == false ? "none" : ""
+            }}
+            class="IconWrapperDiv"
+          >
             <img
               class="img"
               src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
