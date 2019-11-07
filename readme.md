@@ -1,72 +1,172 @@
-![Built With Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d&style=flat-square)
 
-# Stencil Component Starter
+# Social Login Buttons (Web Component)
 
-This is a starter project for building a standalone Web Component using Stencil.
+**__social-login-buttons__** is a light weight and simple Web Component to display Social Login Buttons in your Angular, React, VueJS or Vanilla JS project.
 
-Stencil is also great for building entire apps. For that, use the [stencil-app-starter](https://github.com/ionic-team/stencil-app-starter) instead.
 
-# Stencil
+## DEMO
+Coming Soon
+## Why is _social-login-button_ the best choice for your project?
+There are plenty of other packages that display social login buttons but our packkage offers following features.
+1. One Component for all Platforms. **social-login-component** is a web component, it works on all platforms including **Angular, React, Vue Js and Vanilla Javascript**
+2. Lightweight and easy to implement.
+3. Fully customizable. Using props, You can set the button to use Material UI design, and remove animation with a minimum code changes.
 
-Stencil is a compiler for building fast web apps using Web Components.
-
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
-
-Stencil components are just Web Components, so they work in any major framework or with no framework at all.
-
-## Getting Started
-
-To start building a new web component using Stencil, clone this repo to a new directory:
-
+## Install     
+npm
 ```bash
-git clone https://github.com/ionic-team/stencil-component-starter.git my-component
-cd my-component
-git remote rm origin
+npm install social-login-buttons
+```
+yarn
+```bash
+yarn add social-login-buttons
 ```
 
-and run:
 
-```bash
-npm install
-npm start
+
+## Usage
+
+### React Social Login
+---
+
+First of all, import the package into your class file
+```javascript
+import { applyPolyfills, defineCustomElements } from ‘social-login-buttons/loader’;
 ```
 
-To build the component for production, run:
-
-```bash
-npm run build
+After imports, insert this code outside of your class declaration
+```javascript
+applyPolyfills().then(() => {
+   defineCustomElements(window);
+});
 ```
 
-To run the unit tests for the components, run:
-
-```bash
-npm test
+Currently we are only providing 3 login buttons but dont worry more buttons are coming soon. (yay)
+To add the button to you page just add the following line where you want the button.
+##### Google Login Button
+```javascript
+<google-login> </google-login>
+```
+##### Facebook Login Button
+```javascript
+<facebook-login> </facebook-login>
 ```
 
-Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-component).
+##### Github Login Button   
+```javascript
+ <github-login> </github-login>
+```
+
+#### Customization
+By default Login Buttons are animated on hover. You can remove the animation by setting `animation` to `false`. For example,
+```javascript
+<facebook-login animation={false} ></facebook-login>
+```
+By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` [reword req. ??]
+
+```javascript
+<facebook-login variant={‘material’} ></facebook-login>
+```
 
 
-## Naming Components
 
-When creating new component tags, we recommend _not_ using `stencil` in the component name (ex: `<stencil-datepicker>`). This is because the generated component has little to nothing to do with Stencil; it's just a web component!
+### Angular Social Login
+---
 
-Instead, use a prefix that fits your company or any name for a group of related components. For example, all of the Ionic generated web components use the prefix `ion`.
+In your project directory navigate to `app.module.ts` and do the following.
+1. Import' `CUSTOM_ELEMENTS_SCHEMA` from `@angular/core`. Add this to the line where you are importing NGModule.
+2. Edit you NGModule to set `CUSTOM_ELEMENTS_SCHEMA` in your `schemas`
+
+Previously your `app.module.ts` file looked like this
+```javascript
+import { BrowserModule } from “@angular/platform-browser”;
+import { NgModule} from “@angular/core”;
+import { AppRoutingModule } from “./app-routing.module”;
+import { AppComponent } from “./app.component”;
+import { <YourComponentName>} from “./stencil-test/your-component-name”;
+@NgModule({
+ declarations: [AppComponent, <YourComponentName>],
+ imports: [BrowserModule, AppRoutingModule],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
 
-## Using this component
+Now your `app.module.ts` file should look like this
+```javascript
+import { BrowserModule } from “@angular/platform-browser”;
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from “@angular/core”;
+import { AppRoutingModule } from “./app-routing.module”;
+import { AppComponent } from “./app.component”;
+import { StencilTestComponent } from “./stencil-test/stencil-test.component”;
+@NgModule({
+ declarations: [AppComponent, StencilTestComponent],
+ imports: [BrowserModule, AppRoutingModule],
+ providers: [],
+ schemas: [CUSTOM_ELEMENTS_SCHEMA],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}
 
-### Script tag
+```
 
-- [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/mycomponent.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+Navigate to your component's typescript file and import the package.
+```javascript
+import { applyPolyfills, defineCustomElements } from ‘social-login-buttons/loader’;
+```
 
-### Node Modules
-- Run `npm install my-component --save`
-- Put a script tag similar to this `<script src='node_modules/my-component/dist/mycomponent.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+After imports, insert this code outside of your class declaration
+```javascript
+applyPolyfills().then(() => {
+   defineCustomElements(window);
+});
+```
 
-### In a stencil-starter app
-- Run `npm install my-component --save`
-- Add an import to the npm packages `import my-component;`
-- Then you can use the element anywhere in your template, JSX, html etc
+Now navigate to your component's HTML file and simply add the following line where you want to add the component.
+##### Google Login Button
+```javascript
+<google-login> </google-login>
+```
+##### Facebook Login Button
+```javascript
+<facebook-login> </facebook-login>
+```
+
+##### Github Login Button   
+```javascript
+ <github-login> </github-login>
+```
+
+### Customization
+By default Login Buttons are animated on hover. You can remove the animation by setting `animation` to `false`. For example,
+```javascript
+<facebook-login animation={false} ></facebook-login>
+```
+By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` [reword req. ??]
+
+```javascript
+<facebook-login variant={‘material’} ></facebook-login>
+```
+
+
+## Contribution
+Issues and pull requests are welcome at https://github.com/hileets/social-login-buttons
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
