@@ -10,7 +10,7 @@ Coming Soon
 There are plenty of other packages that display social login buttons but our packkage offers following features.
 1. One Component for all Platforms. **social-login-component** is a web component, it works on all platforms including **Angular, React, Vue Js and Vanilla Javascript**
 2. Lightweight and easy to implement.
-3. Fully customizable. Using props, You can set the button to use Material UI design, and remove animation with a minimum code changes.
+3. Fully customizable. Using props, You can set the button to use **Material UI design**, and remove animation with a minimum code changes.
 
 ## Install     
 npm
@@ -62,7 +62,7 @@ By default Login Buttons are animated on hover. You can remove the animation by 
 ```javascript
 <facebook-login animation={false} ></facebook-login>
 ```
-By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` [reword req. ??]
+By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` 
 
 ```javascript
 <facebook-login variant={‘material’} ></facebook-login>
@@ -144,7 +144,7 @@ By default Login Buttons are animated on hover. You can remove the animation by 
 ```javascript
 <facebook-login animation={false} ></facebook-login>
 ```
-By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` [reword req. ??]
+By default the buttons use custom styling it can be changed to material ui design by setting `variant` to `material` .
 
 ```javascript
 <facebook-login variant={‘material’} ></facebook-login>
