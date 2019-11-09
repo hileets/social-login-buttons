@@ -58,6 +58,10 @@ To add the button to you page just add the following line where you want the but
 ```
 
 #### Customization
+By default the buttons display their own text however you can change thme to say whatever you want.
+```javascript
+<facebook-login text={'Anything you write here will be the button text'} ></facebook-login>
+```
 By default Login Buttons are animated on hover. You can remove the animation by setting `animation` to `false`. For example,
 ```javascript
 <facebook-login animation={false} ></facebook-login>
@@ -140,6 +144,10 @@ Now navigate to your component's HTML file and simply add the following line whe
 ```
 
 ### Customization
+By default the buttons display their own text however you can change thme to say whatever you want.
+```javascript
+<facebook-login text={'Anything you write here will be the button text'} ></facebook-login>
+```
 By default Login Buttons are animated on hover. You can remove the animation by setting `animation` to `false`. For example,
 ```javascript
 <facebook-login animation={false} ></facebook-login>
