@@ -4,8 +4,6 @@
 **__social-login-buttons__** is a light weight and simple Web Component to display Social Login Buttons in your Angular, React, VueJS or Vanilla JS project.
 
 
-## DEMO
-Coming Soon
 ## Why is _social-login-button_ the best choice for your project?
 There are plenty of other packages that display social login buttons but our packkage offers following features.
 1. One Component for all Platforms. **social-login-component** is a web component, it works on all platforms including **Angular, React, Vue Js and Vanilla Javascript**
