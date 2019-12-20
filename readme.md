@@ -56,7 +56,7 @@ To add the button to you page just add the following line where you want the but
 ```
 
 #### Customization
-By default the buttons display their own text however you can change thme to say whatever you want.
+By default the buttons display their own text however you can change them to say whatever you want.
 ```javascript
 <facebook-login text={'Anything you write here will be the button text'} ></facebook-login>
 ```
@@ -142,7 +142,7 @@ Now navigate to your component's HTML file and simply add the following line whe
 ```
 
 ### Customization
-By default the buttons display their own text however you can change thme to say whatever you want.
+By default the buttons display their own text however you can change them to say whatever you want.
 ```javascript
 <facebook-login text={'Anything you write here will be the button text'} ></facebook-login>
 ```
